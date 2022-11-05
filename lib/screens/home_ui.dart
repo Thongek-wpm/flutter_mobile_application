@@ -30,10 +30,10 @@ class _HomeUiState extends State<HomeUi> {
                 children: [
                   ClipRRect(
                     child: Image.network(
-                      '',
+                      'https://images.pexels.com/photos/5540995/pexels-photo-5540995.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
                       width: 200.0,
                       height: 200.0,
-                      fit: BoxFit.cover,
+                      fit: BoxFit.fill,
                     ),
                     borderRadius: BorderRadius.circular(100.0),
                   ),
@@ -44,7 +44,7 @@ class _HomeUiState extends State<HomeUi> {
                 ],
               ),
             ],
-          )),
-        ));
+          ),),
+        ),backgroundColor: Colors.grey,);
   }
 }
