@@ -61,18 +61,65 @@ class _HomeUiState extends State<HomeUi> {
                 height: MediaQuery.of(context).size.width * 0.1,
               ),
               // ignore: prefer_const_constructors
-              ListTile(
-                // ignore: prefer_const_constructors
-                leading: Icon(
-                  FontAwesomeIcons.person,
-                  color: Colors.blue,
+              Padding(
+                padding: EdgeInsets.only(
+                  left: MediaQuery.of(context).size.width * 0.1,
+                  right: MediaQuery.of(context).size.width * 0.1,
                 ),
                 // ignore: prefer_const_constructors
-                trailing: Icon(Icons.update),
+                child: ListTile(
+                  // ignore: prefer_const_constructors
+                  leading: Icon(
+                    FontAwesomeIcons.person,
+                    color: Colors.blue,
+                  ),
+                  // ignore: prefer_const_constructors
+                  trailing: Icon(Icons.update),
+                  // ignore: prefer_const_constructors
+                  title: Text("Name"),
+                  // ignore: prefer_const_constructors
+                  subtitle: Text("XXXX YYYYYY"),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.only(
+                  left: MediaQuery.of(context).size.width * 0.1,
+                  right: MediaQuery.of(context).size.width * 0.1,
+                ),
                 // ignore: prefer_const_constructors
-                title: Text("Name"),
+                child: ListTile(
+                  // ignore: prefer_const_constructors
+                  leading: Icon(
+                    FontAwesomeIcons.phone,
+                    color: Colors.blue,
+                  ),
+                  // ignore: prefer_const_constructors
+                  trailing: Icon(Icons.update),
+                  // ignore: prefer_const_constructors
+                  title: Text("Tel."),
+                  // ignore: prefer_const_constructors
+                  subtitle: Text("XXXXXXXXXXX"),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.only(
+                  left: MediaQuery.of(context).size.width * 0.1,
+                  right: MediaQuery.of(context).size.width * 0.1,
+                ),
                 // ignore: prefer_const_constructors
-                subtitle: Text("XXXX YYYYYY"),
+                child: ListTile(
+                  // ignore: prefer_const_constructors
+                  leading: Icon(
+                    Icons.email,
+                    color: Colors.blue,
+                  ),
+                  // ignore: prefer_const_constructors
+                  trailing: Icon(Icons.update),
+                  // ignore: prefer_const_constructors
+                  title: Text("E-mail"),
+                  // ignore: prefer_const_constructors
+                  subtitle: Text("XXXXX@YYYYY.com"),
+                ),
               ),
             ],
           ),
