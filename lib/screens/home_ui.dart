@@ -19,6 +19,7 @@ class _HomeUiState extends State<HomeUi> {
           style: GoogleFonts.kadwa(fontSize: 15.0),
         ),
         centerTitle: true,
+        backgroundColor: Colors.lightGreen,
       ),
       body: SingleChildScrollView(
         child: Center(
@@ -29,14 +30,16 @@ class _HomeUiState extends State<HomeUi> {
                 crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
                   ClipRRect(
+                    // ignore: sort_child_properties_last
                     child: Image.asset(
-                      "assets/images/sau_logo.png",
+                      "assets/images/support.png",
                       width: 100.0,
                       height: 100.0,
                       fit: BoxFit.cover,
                     ),
                     borderRadius: BorderRadius.circular(100.0),
                   ),
+                  // ignore: prefer_const_constructors
                   Icon(
                     FontAwesomeIcons.camera,
                     size: 30,
