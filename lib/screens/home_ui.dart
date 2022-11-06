@@ -60,11 +60,16 @@ class _HomeUiState extends State<HomeUi> {
               SizedBox(
                 height: MediaQuery.of(context).size.width * 0.1,
               ),
+              // ignore: prefer_const_constructors
               ListTile(
+                // ignore: prefer_const_constructors
                 leading: Icon(FontAwesomeIcons.person),
+                // ignore: prefer_const_constructors
                 trailing: Icon(Icons.update),
+                // ignore: prefer_const_constructors
                 title: Text("Name"),
-                subtitle: Text("XXXX"),
+                // ignore: prefer_const_constructors
+                subtitle: Text("XXXX YYYYYY"),
               ),
             ],
           ),
