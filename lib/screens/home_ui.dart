@@ -63,7 +63,10 @@ class _HomeUiState extends State<HomeUi> {
               // ignore: prefer_const_constructors
               ListTile(
                 // ignore: prefer_const_constructors
-                leading: Icon(FontAwesomeIcons.person),
+                leading: Icon(
+                  FontAwesomeIcons.person,
+                  color: Colors.blue,
+                ),
                 // ignore: prefer_const_constructors
                 trailing: Icon(Icons.update),
                 // ignore: prefer_const_constructors
