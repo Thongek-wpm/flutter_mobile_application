@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors, duplicate_ignore
+
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
@@ -56,6 +58,7 @@ class _EditaboutmeUiState extends State<EditaboutmeUi> {
               SizedBox(height: MediaQuery.of(context).size.width * 0.03),
               Padding(
                 padding: const EdgeInsets.only(left: 40, right: 40),
+                // ignore: prefer_const_constructors
                 child: TextField(
                   decoration: InputDecoration(
                     focusedBorder: OutlineInputBorder(
