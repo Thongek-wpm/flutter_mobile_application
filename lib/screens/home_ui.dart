@@ -13,27 +13,27 @@ class _HomeUiState extends State<HomeUi> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: Text(
-            "My mobile Application",
-            style: GoogleFonts.kadwa(fontSize: 15.0),
-          ),
-          centerTitle: true,
+      appBar: AppBar(
+        title: Text(
+          "My mobile Application",
+          style: GoogleFonts.kadwa(fontSize: 15.0),
         ),
-        body: SingleChildScrollView(
-          child: Center(
-              child: Column(
+        centerTitle: true,
+      ),
+      body: SingleChildScrollView(
+        child: Center(
+          child: Column(
             children: [
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
                   ClipRRect(
-                    child: Image.network(
-                      'https://images.pexels.com/photos/5540995/pexels-photo-5540995.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-                      width: 200.0,
-                      height: 200.0,
-                      fit: BoxFit.fill,
+                    child: Image.asset(
+                      "assets/images/sau_logo.png",
+                      width: 100.0,
+                      height: 100.0,
+                      fit: BoxFit.cover,
                     ),
                     borderRadius: BorderRadius.circular(100.0),
                   ),
@@ -44,7 +44,10 @@ class _HomeUiState extends State<HomeUi> {
                 ],
               ),
             ],
-          ),),
-        ),backgroundColor: Colors.grey,);
+          ),
+        ),
+      ),
+      backgroundColor: Colors.grey,
+    );
   }
 }
