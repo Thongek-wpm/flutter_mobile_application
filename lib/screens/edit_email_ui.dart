@@ -12,6 +12,8 @@ class EditemailUi extends StatefulWidget {
 class _EditemailUiState extends State<EditemailUi> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      appBar: AppBar(backgroundColor: Colors.lightGreen),
+    );
   }
 }

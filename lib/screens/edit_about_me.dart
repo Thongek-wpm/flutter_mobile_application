@@ -12,6 +12,8 @@ class EditaboutmeUi extends StatefulWidget {
 class _EditaboutmeUiState extends State<EditaboutmeUi> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      appBar: AppBar(backgroundColor: Colors.lightGreen),
+    );
   }
 }

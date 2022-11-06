@@ -12,6 +12,8 @@ class EditnameUi extends StatefulWidget {
 class _EditnameUiState extends State<EditnameUi> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      appBar: AppBar(backgroundColor: Colors.lightGreen),
+    );
   }
 }

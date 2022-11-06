@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:my_mo_app/screens/edit.phone_ui.dart';
+import 'package:my_mo_app/screens/edit_about_me.dart';
+import 'package:my_mo_app/screens/edit_email_ui.dart';
+import 'package:my_mo_app/screens/edit_name_ui.dart';
 
 class HomeUi extends StatefulWidget {
   const HomeUi({super.key});
@@ -51,8 +55,8 @@ class _HomeUiState extends State<HomeUi> {
                     onPressed: () {},
                     // ignore: prefer_const_constructors
                     icon: Icon(
-                      Icons.photo,
-                      size: 30,
+                      Icons.camera_alt,
+                      size: 25,
                     ),
                   ),
                 ],
@@ -68,6 +72,14 @@ class _HomeUiState extends State<HomeUi> {
                 ),
                 // ignore: prefer_const_constructors
                 child: ListTile(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => EditnameUi(),
+                      ),
+                    );
+                  },
                   // ignore: prefer_const_constructors
                   leading: Icon(
                     FontAwesomeIcons.person,
@@ -88,6 +100,14 @@ class _HomeUiState extends State<HomeUi> {
                 ),
                 // ignore: prefer_const_constructors
                 child: ListTile(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => EditphoneUi(),
+                      ),
+                    );
+                  },
                   // ignore: prefer_const_constructors
                   leading: Icon(
                     FontAwesomeIcons.phone,
@@ -108,6 +128,14 @@ class _HomeUiState extends State<HomeUi> {
                 ),
                 // ignore: prefer_const_constructors
                 child: ListTile(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => EditemailUi(),
+                      ),
+                    );
+                  },
                   // ignore: prefer_const_constructors
                   leading: Icon(
                     Icons.email,
@@ -119,6 +147,34 @@ class _HomeUiState extends State<HomeUi> {
                   title: Text("E-mail"),
                   // ignore: prefer_const_constructors
                   subtitle: Text("XXXXX@YYYYY.com"),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.only(
+                  left: MediaQuery.of(context).size.width * 0.1,
+                  right: MediaQuery.of(context).size.width * 0.1,
+                ),
+                // ignore: prefer_const_constructors
+                child: ListTile(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => EditaboutmeUi(),
+                      ),
+                    );
+                  },
+                  // ignore: prefer_const_constructors
+                  leading: Icon(
+                    FontAwesomeIcons.objectGroup,
+                    color: Colors.blue,
+                  ),
+                  // ignore: prefer_const_constructors
+                  trailing: Icon(Icons.update),
+                  // ignore: prefer_const_constructors
+                  title: Text("About Me"),
+                  // ignore: prefer_const_constructors
+                  subtitle: Text("XXXXXXXXXXXXX..."),
                 ),
               ),
             ],
