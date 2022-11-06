@@ -29,15 +29,22 @@ class _HomeUiState extends State<HomeUi> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
-                  ClipRRect(
-                    // ignore: sort_child_properties_last
-                    child: Image.asset(
-                      "assets/images/support.png",
-                      width: 100.0,
-                      height: 100.0,
-                      fit: BoxFit.cover,
-                    ),
-                    borderRadius: BorderRadius.circular(100.0),
+                  SizedBox(
+                    height: MediaQuery.of(context).size.width * 0.3,
+                  ),
+                  Row(
+                    children: [
+                      ClipRRect(
+                        // ignore: sort_child_properties_last
+                        child: Image.asset(
+                          "assets/images/support.png",
+                          width: 100.0,
+                          height: 100.0,
+                          fit: BoxFit.cover,
+                        ),
+                        borderRadius: BorderRadius.circular(100.0),
+                      ),
+                    ],
                   ),
                   // ignore: prefer_const_constructors
                   IconButton(
@@ -49,6 +56,15 @@ class _HomeUiState extends State<HomeUi> {
                     ),
                   ),
                 ],
+              ),
+              SizedBox(
+                height: MediaQuery.of(context).size.width * 0.1,
+              ),
+              ListTile(
+                leading: Icon(FontAwesomeIcons.person),
+                trailing: Icon(Icons.update),
+                title: Text("Name"),
+                subtitle: Text("XXXX"),
               ),
             ],
           ),
