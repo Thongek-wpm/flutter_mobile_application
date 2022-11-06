@@ -40,10 +40,14 @@ class _HomeUiState extends State<HomeUi> {
                     borderRadius: BorderRadius.circular(100.0),
                   ),
                   // ignore: prefer_const_constructors
-                  Icon(
-                    FontAwesomeIcons.camera,
-                    size: 30,
-                  )
+                  IconButton(
+                    onPressed: () {},
+                    // ignore: prefer_const_constructors
+                    icon: Icon(
+                      Icons.photo,
+                      size: 30,
+                    ),
+                  ),
                 ],
               ),
             ],
