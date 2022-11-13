@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class EditemailUi extends StatefulWidget {
@@ -12,6 +9,7 @@ class EditemailUi extends StatefulWidget {
 }
 
 class _EditemailUiState extends State<EditemailUi> {
+  TextEditingController emailctrl = TextEditingController(text: "");
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,7 +25,7 @@ class _EditemailUiState extends State<EditemailUi> {
           onPressed: () {
             Navigator.pop(context);
           },
-          icon: Icon(Icons.arrow_back_ios),
+          icon: const Icon(Icons.arrow_back_ios),
         ),
         centerTitle: true,
         backgroundColor: Colors.lightGreen,
@@ -57,8 +55,10 @@ class _EditemailUiState extends State<EditemailUi> {
               Padding(
                 padding: const EdgeInsets.only(left: 40, right: 40),
                 child: TextField(
+                  controller: emailctrl,
+                  // ignore: prefer_const_constructors
                   decoration: InputDecoration(
-                    focusedBorder: OutlineInputBorder(
+                    focusedBorder: const OutlineInputBorder(
                       borderSide: BorderSide(color: Colors.blue),
                     ),
                   ),
@@ -69,7 +69,7 @@ class _EditemailUiState extends State<EditemailUi> {
               ),
               ElevatedButton(
                 onPressed: () {},
-                child: Text("Done"),
+                child: const Text("Done"),
                 style: ElevatedButton.styleFrom(
                     fixedSize: Size(
                   MediaQuery.of(context).size.width * 0.8,

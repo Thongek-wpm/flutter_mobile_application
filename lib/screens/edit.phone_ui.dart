@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -12,6 +10,7 @@ class EditphoneUi extends StatefulWidget {
 }
 
 class _EditphoneUiState extends State<EditphoneUi> {
+  TextEditingController phonetrl = TextEditingController(text: '');
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -57,6 +56,7 @@ class _EditphoneUiState extends State<EditphoneUi> {
               Padding(
                 padding: const EdgeInsets.only(left: 40, right: 40),
                 child: TextField(
+                  controller: phonetrl,
                   decoration: InputDecoration(
                     focusedBorder: OutlineInputBorder(
                       borderSide: BorderSide(color: Colors.blue),

@@ -1,8 +1,6 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -14,6 +12,8 @@ class EditnameUi extends StatefulWidget {
 }
 
 class _EditnameUiState extends State<EditnameUi> {
+  TextEditingController nameCtrl = TextEditingController(text: '');
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -59,6 +59,7 @@ class _EditnameUiState extends State<EditnameUi> {
               Padding(
                 padding: const EdgeInsets.only(left: 40, right: 40),
                 child: TextField(
+                  controller: nameCtrl,
                   decoration: InputDecoration(
                     focusedBorder: OutlineInputBorder(
                       borderSide: BorderSide(color: Colors.blue),

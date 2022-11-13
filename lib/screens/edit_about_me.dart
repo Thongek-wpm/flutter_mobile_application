@@ -14,6 +14,7 @@ class EditaboutmeUi extends StatefulWidget {
 }
 
 class _EditaboutmeUiState extends State<EditaboutmeUi> {
+  TextEditingController aboutctrl = TextEditingController(text: "");
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -60,6 +61,7 @@ class _EditaboutmeUiState extends State<EditaboutmeUi> {
                 padding: const EdgeInsets.only(left: 40, right: 40),
                 // ignore: prefer_const_constructors
                 child: TextField(
+                  controller: aboutctrl,
                   decoration: InputDecoration(
                     focusedBorder: OutlineInputBorder(
                       borderSide: BorderSide(color: Colors.blue),
