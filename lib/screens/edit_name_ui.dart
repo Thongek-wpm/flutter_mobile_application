@@ -3,6 +3,8 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:my_mo_app/screens/home_ui.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class EditnameUi extends StatefulWidget {
   const EditnameUi({super.key});
@@ -13,6 +15,13 @@ class EditnameUi extends StatefulWidget {
 
 class _EditnameUiState extends State<EditnameUi> {
   TextEditingController nameCtrl = TextEditingController(text: '');
+  Future saveToSP() async {
+    SharedPreferences sp = await SharedPreferences.getInstance();
+    sp.setString(
+      'name_key',
+      nameCtrl.text.trim(),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -98,7 +107,11 @@ class _EditnameUiState extends State<EditnameUi> {
                         );
                       },
                     );
-                  } else {}
+                  } else {
+                    saveToSP().then(
+                      (value) => Navigator.pop(context),
+                    );
+                  }
                 },
                 child: Text("Done"),
                 style: ElevatedButton.styleFrom(

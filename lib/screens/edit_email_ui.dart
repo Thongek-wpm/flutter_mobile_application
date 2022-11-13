@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class EditemailUi extends StatefulWidget {
   const EditemailUi({super.key});
@@ -10,6 +11,13 @@ class EditemailUi extends StatefulWidget {
 
 class _EditemailUiState extends State<EditemailUi> {
   TextEditingController emailctrl = TextEditingController(text: "");
+    Future saveToSP() async {
+    SharedPreferences sp = await SharedPreferences.getInstance();
+    sp.setString(
+      'email_key',
+      emailctrl.text.trim(),
+    );
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(

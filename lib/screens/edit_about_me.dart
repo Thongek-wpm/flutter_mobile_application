@@ -5,6 +5,7 @@ import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class EditaboutmeUi extends StatefulWidget {
   const EditaboutmeUi({super.key});
@@ -15,6 +16,14 @@ class EditaboutmeUi extends StatefulWidget {
 
 class _EditaboutmeUiState extends State<EditaboutmeUi> {
   TextEditingController aboutctrl = TextEditingController(text: "");
+  Future saveToSP() async {
+    SharedPreferences sp = await SharedPreferences.getInstance();
+    sp.setString(
+      'about_key',
+      aboutctrl.text.trim(),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
