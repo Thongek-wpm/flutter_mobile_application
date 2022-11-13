@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -19,10 +20,10 @@ class HomeUi extends StatefulWidget {
 }
 
 class _HomeUiState extends State<HomeUi> {
-  String ur_name = 'XXXX YYYYYY';
-  String ur_phone = 'XXXXXXXXX';
-  String ur_email = 'XXXXX@YYYY.com';
-  String ur_about = 'XXXXXXXXXXX....';
+  String ur_name = 'โปรดใส่ข้อมูล';
+  String ur_phone = 'โปรดใส่ข้อมูล';
+  String ur_email = 'โปรดใส่ข้อมูล';
+  String ur_about = 'โปรดใส่ข้อมูล';
   getfromSP() async {
     SharedPreferences sp = await SharedPreferences.getInstance();
     if (sp.containsKey("name_key") == true) {
@@ -128,8 +129,32 @@ class _HomeUiState extends State<HomeUi> {
                   IconButton(
                     onPressed: () {
                       //open photo or gallery
-                      takePhotoFromCamera();
-                      //selectPhotoFromCamera();
+                      showCupertinoModalPopup(
+                        context: context,
+                        builder: ((context) => CupertinoActionSheet(
+                              title: Text(
+                                "คุณจะใช้รูปภาพแบบ",
+                                style: GoogleFonts.kanit(
+                                    fontWeight: FontWeight.bold),
+                              ),
+                              actions: [
+                                CupertinoActionSheetAction(
+                                  onPressed: (() => takePhotoFromCamera()),
+                                  child: Icon(Icons.camera),
+                                ),
+                                CupertinoActionSheetAction(
+                                  onPressed: (() => selectPhotoFromCamera()),
+                                  child: Icon(Icons.photo_library),
+                                ),
+                                CupertinoActionSheetAction(
+                                  onPressed: () {
+                                    Navigator.pop(context);
+                                  },
+                                  child: Text('ยกเลิก'),
+                                ),
+                              ],
+                            )),
+                      );
                     },
                     // ignore: prefer_const_constructors
                     icon: Icon(
