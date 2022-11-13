@@ -67,7 +67,7 @@ class _EditphoneUiState extends State<EditphoneUi> {
                 child: TextField(
                   keyboardType: TextInputType.number,
                   controller: phonetrl,
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                     focusedBorder: OutlineInputBorder(
                       borderSide: BorderSide(color: Colors.blue),
                     ),
