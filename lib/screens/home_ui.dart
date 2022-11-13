@@ -14,6 +14,10 @@ class HomeUi extends StatefulWidget {
 }
 
 class _HomeUiState extends State<HomeUi> {
+  String ur_name = 'XXXX YYYYYY';
+  String ur_phone = 'XXXXXXXXX';
+  String ur_email = 'XXXXX@YYYY.com';
+  String ur_about = 'XXXXXXXXXXX....';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -90,7 +94,7 @@ class _HomeUiState extends State<HomeUi> {
                   // ignore: prefer_const_constructors
                   title: Text("Name"),
                   // ignore: prefer_const_constructors
-                  subtitle: Text("XXXX YYYYYY"),
+                  subtitle: Text(ur_name),
                 ),
               ),
               Padding(
@@ -118,7 +122,7 @@ class _HomeUiState extends State<HomeUi> {
                   // ignore: prefer_const_constructors
                   title: Text("Tel."),
                   // ignore: prefer_const_constructors
-                  subtitle: Text("XXXXXXXXXXX"),
+                  subtitle: Text(ur_phone),
                 ),
               ),
               Padding(
@@ -146,7 +150,7 @@ class _HomeUiState extends State<HomeUi> {
                   // ignore: prefer_const_constructors
                   title: Text("E-mail"),
                   // ignore: prefer_const_constructors
-                  subtitle: Text("XXXXX@YYYYY.com"),
+                  subtitle: Text(ur_email),
                 ),
               ),
               Padding(
@@ -174,7 +178,7 @@ class _HomeUiState extends State<HomeUi> {
                   // ignore: prefer_const_constructors
                   title: Text("About Me"),
                   // ignore: prefer_const_constructors
-                  subtitle: Text("XXXXXXXXXXXXX..."),
+                  subtitle: Text(ur_about),
                 ),
               ),
             ],
