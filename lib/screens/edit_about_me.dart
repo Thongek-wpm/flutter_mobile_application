@@ -73,7 +73,35 @@ class _EditaboutmeUiState extends State<EditaboutmeUi> {
                 height: MediaQuery.of(context).size.width * 0.03,
               ),
               ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  // check name if enter collact data and show MGS
+                  // if entered show
+                  if (aboutctrl.text.trim().isEmpty) {
+                    showDialog(
+                      context: context,
+                      builder: (context) {
+                        return AlertDialog(
+                          title: Text(
+                            "คำเตือน",
+                            style: GoogleFonts.kanit(),
+                          ),
+                          content: Text(
+                            "โปรดใส่ข้อมูลด้วย",
+                            style: GoogleFonts.kanit(),
+                          ),
+                          actions: [
+                            ElevatedButton(
+                              onPressed: () {
+                                Navigator.pop(context);
+                              },
+                              child: Text("Okay"),
+                            ),
+                          ],
+                        );
+                      },
+                    );
+                  } else {}
+                },
                 child: Text("Done"),
                 style: ElevatedButton.styleFrom(
                     fixedSize: Size(
