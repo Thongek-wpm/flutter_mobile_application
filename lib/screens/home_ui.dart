@@ -1,6 +1,9 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:image_picker/image_picker.dart';
 import 'package:my_mo_app/screens/edit.phone_ui.dart';
 import 'package:my_mo_app/screens/edit_about_me.dart';
 import 'package:my_mo_app/screens/edit_email_ui.dart';
@@ -52,6 +55,28 @@ class _HomeUiState extends State<HomeUi> {
     super.initState();
   }
 
+  File? photo;
+
+  takePhotoFromCamera() async {
+    XFile? pickImages =
+        await ImagePicker().pickImage(source: ImageSource.camera);
+    if (pickImages != null) {
+      setState(() {
+        photo = File(pickImages.path);
+      });
+    }
+  }
+
+  selectPhotoFromCamera() async {
+    XFile? pickImages =
+        await ImagePicker().pickImage(source: ImageSource.gallery);
+    if (pickImages != null) {
+      setState(() {
+        photo = File(pickImages.path);
+      });
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -76,21 +101,36 @@ class _HomeUiState extends State<HomeUi> {
                   ),
                   Row(
                     children: [
-                      ClipRRect(
-                        // ignore: sort_child_properties_last
-                        child: Image.asset(
-                          "assets/images/support.png",
-                          width: 100.0,
-                          height: 100.0,
-                          fit: BoxFit.cover,
-                        ),
-                        borderRadius: BorderRadius.circular(100.0),
-                      ),
+                      photo == null
+                          ? ClipRRect(
+                              // ignore: sort_child_properties_last
+                              child: Image.asset(
+                                "assets/images/support.png",
+                                width: 100.0,
+                                height: 100.0,
+                                fit: BoxFit.cover,
+                              ),
+                              borderRadius: BorderRadius.circular(100.0),
+                            )
+                          : ClipRRect(
+                              // ignore: sort_child_properties_last
+                              child: Image.file(
+                                photo!,
+                                width: 100.0,
+                                height: 100.0,
+                                fit: BoxFit.cover,
+                              ),
+                              borderRadius: BorderRadius.circular(100.0),
+                            )
                     ],
                   ),
                   // ignore: prefer_const_constructors
                   IconButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      //open photo or gallery
+                      takePhotoFromCamera();
+                      //selectPhotoFromCamera();
+                    },
                     // ignore: prefer_const_constructors
                     icon: Icon(
                       Icons.camera_alt,
