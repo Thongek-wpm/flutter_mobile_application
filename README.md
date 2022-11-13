@@ -1,5 +1,5 @@
 # my_mo_app
-<img src=https://user-images.githubusercontent.com/70640558/201530089-0652837d-96dc-4422-bb3b-77e492d826f8.jpg></img>
+<img src=https://user-images.githubusercontent.com/70640558/201535766-aff7b855-8dc4-4a17-a9c4-30c8282372c9.jpg></img>
 
 ## Getting Started
 
