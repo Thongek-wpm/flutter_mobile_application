@@ -64,6 +64,7 @@ class _EditemailUiState extends State<EditemailUi> {
               Padding(
                 padding: const EdgeInsets.only(left: 40, right: 40),
                 child: TextField(
+                  keyboardType: TextInputType.emailAddress,
                   controller: emailctrl,
                   // ignore: prefer_const_constructors
                   decoration: InputDecoration(

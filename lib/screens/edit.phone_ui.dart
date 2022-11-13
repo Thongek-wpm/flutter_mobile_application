@@ -65,6 +65,7 @@ class _EditphoneUiState extends State<EditphoneUi> {
               Padding(
                 padding: const EdgeInsets.only(left: 40, right: 40),
                 child: TextField(
+                  keyboardType: TextInputType.number,
                   controller: phonetrl,
                   decoration: InputDecoration(
                     focusedBorder: OutlineInputBorder(
