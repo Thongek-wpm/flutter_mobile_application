@@ -5,6 +5,7 @@ import 'package:my_mo_app/screens/edit.phone_ui.dart';
 import 'package:my_mo_app/screens/edit_about_me.dart';
 import 'package:my_mo_app/screens/edit_email_ui.dart';
 import 'package:my_mo_app/screens/edit_name_ui.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class HomeUi extends StatefulWidget {
   const HomeUi({super.key});
@@ -18,6 +19,38 @@ class _HomeUiState extends State<HomeUi> {
   String ur_phone = 'XXXXXXXXX';
   String ur_email = 'XXXXX@YYYY.com';
   String ur_about = 'XXXXXXXXXXX....';
+  getfromSP() async {
+    SharedPreferences sp = await SharedPreferences.getInstance();
+    if (sp.containsKey("name_key") == true) {
+      setState(() {
+        ur_name = sp.getString('name_key')!;
+      });
+    }
+    if (sp.containsKey("phone_key") == true) {
+      setState(() {
+        ur_phone = sp.getString('phone_key')!;
+      });
+    }
+    if (sp.containsKey("email_key") == true) {
+      setState(() {
+        ur_email = sp.getString('email_key')!;
+      });
+    }
+
+    if (sp.containsKey("about_key") == true) {
+      setState(() {
+        ur_about = sp.getString('about_key')!;
+      });
+    }
+  }
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    getfromSP();
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
