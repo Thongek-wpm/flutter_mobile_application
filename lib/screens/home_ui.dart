@@ -9,7 +9,6 @@ import 'package:my_mo_app/screens/edit.phone_ui.dart';
 import 'package:my_mo_app/screens/edit_about_me.dart';
 import 'package:my_mo_app/screens/edit_email_ui.dart';
 import 'package:my_mo_app/screens/edit_name_ui.dart';
-import 'package:path/path.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class HomeUi extends StatefulWidget {
@@ -140,17 +139,17 @@ class _HomeUiState extends State<HomeUi> {
                               actions: [
                                 CupertinoActionSheetAction(
                                   onPressed: (() => takePhotoFromCamera()),
-                                  child: Icon(Icons.camera),
+                                  child: const Icon(Icons.camera),
                                 ),
                                 CupertinoActionSheetAction(
                                   onPressed: (() => selectPhotoFromCamera()),
-                                  child: Icon(Icons.photo_library),
+                                  child: const Icon(Icons.photo_library),
                                 ),
                                 CupertinoActionSheetAction(
                                   onPressed: () {
                                     Navigator.pop(context);
                                   },
-                                  child: Text('ยกเลิก'),
+                                  child: const Text('ยกเลิก'),
                                 ),
                               ],
                             )),
@@ -179,7 +178,7 @@ class _HomeUiState extends State<HomeUi> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => EditnameUi(),
+                        builder: (context) => const EditnameUi(),
                       ),
                     ).then(
                       (context) => getfromSP(),
@@ -209,7 +208,7 @@ class _HomeUiState extends State<HomeUi> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => EditphoneUi(),
+                        builder: (context) => const EditphoneUi(),
                       ),
                     ).then(
                       (context) => getfromSP(),
@@ -239,7 +238,7 @@ class _HomeUiState extends State<HomeUi> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => EditemailUi(),
+                        builder: (context) => const EditemailUi(),
                       ),
                     ).then(
                       (context) => getfromSP(),
@@ -269,7 +268,7 @@ class _HomeUiState extends State<HomeUi> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => EditaboutmeUi(),
+                        builder: (context) => const EditaboutmeUi(),
                       ),
                     ).then(
                       (context) => getfromSP(),
