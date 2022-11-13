@@ -5,6 +5,7 @@ import 'package:my_mo_app/screens/edit.phone_ui.dart';
 import 'package:my_mo_app/screens/edit_about_me.dart';
 import 'package:my_mo_app/screens/edit_email_ui.dart';
 import 'package:my_mo_app/screens/edit_name_ui.dart';
+import 'package:path/path.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class HomeUi extends StatefulWidget {
@@ -115,6 +116,8 @@ class _HomeUiState extends State<HomeUi> {
                       MaterialPageRoute(
                         builder: (context) => EditnameUi(),
                       ),
+                    ).then(
+                      (context) => getfromSP(),
                     );
                   },
                   // ignore: prefer_const_constructors
@@ -143,6 +146,8 @@ class _HomeUiState extends State<HomeUi> {
                       MaterialPageRoute(
                         builder: (context) => EditphoneUi(),
                       ),
+                    ).then(
+                      (context) => getfromSP(),
                     );
                   },
                   // ignore: prefer_const_constructors
@@ -171,6 +176,8 @@ class _HomeUiState extends State<HomeUi> {
                       MaterialPageRoute(
                         builder: (context) => EditemailUi(),
                       ),
+                    ).then(
+                      (context) => getfromSP(),
                     );
                   },
                   // ignore: prefer_const_constructors
@@ -199,6 +206,8 @@ class _HomeUiState extends State<HomeUi> {
                       MaterialPageRoute(
                         builder: (context) => EditaboutmeUi(),
                       ),
+                    ).then(
+                      (context) => getfromSP(),
                     );
                   },
                   // ignore: prefer_const_constructors
