@@ -12,13 +12,14 @@ class EditphoneUi extends StatefulWidget {
 
 class _EditphoneUiState extends State<EditphoneUi> {
   TextEditingController phonetrl = TextEditingController(text: '');
-    Future saveToSP() async {
+  Future saveToSP() async {
     SharedPreferences sp = await SharedPreferences.getInstance();
     sp.setString(
       'phone_key',
       phonetrl.text.trim(),
     );
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -80,7 +81,7 @@ class _EditphoneUiState extends State<EditphoneUi> {
                   // check name if enter collact data and show MGS
                   // if entered show
                   if (phonetrl.text.trim().isEmpty) {
-                     showDialog(
+                    showDialog(
                       context: context,
                       builder: (context) {
                         return AlertDialog(
@@ -103,7 +104,11 @@ class _EditphoneUiState extends State<EditphoneUi> {
                         );
                       },
                     );
-                  } else {}
+                  } else {
+                    saveToSP().then(
+                      (value) => Navigator.pop(context),
+                    );
+                  }
                 },
                 child: Text("Done"),
                 style: ElevatedButton.styleFrom(

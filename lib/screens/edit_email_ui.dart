@@ -11,13 +11,14 @@ class EditemailUi extends StatefulWidget {
 
 class _EditemailUiState extends State<EditemailUi> {
   TextEditingController emailctrl = TextEditingController(text: "");
-    Future saveToSP() async {
+  Future saveToSP() async {
     SharedPreferences sp = await SharedPreferences.getInstance();
     sp.setString(
       'email_key',
       emailctrl.text.trim(),
     );
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -80,7 +81,7 @@ class _EditemailUiState extends State<EditemailUi> {
                   // check name if enter collact data and show MGS
                   // if entered show
                   if (emailctrl.text.trim().isEmpty) {
-                     showDialog(
+                    showDialog(
                       context: context,
                       builder: (context) {
                         return AlertDialog(
@@ -103,7 +104,11 @@ class _EditemailUiState extends State<EditemailUi> {
                         );
                       },
                     );
-                  } else {}
+                  } else {
+                    saveToSP().then(
+                      (value) => Navigator.pop(context),
+                    );
+                  }
                 },
                 child: const Text("Done"),
                 style: ElevatedButton.styleFrom(

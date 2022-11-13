@@ -109,7 +109,11 @@ class _EditaboutmeUiState extends State<EditaboutmeUi> {
                         );
                       },
                     );
-                  } else {}
+                  } else {
+                    saveToSP().then(
+                      (value) => Navigator.pop(context),
+                    );
+                  }
                 },
                 child: Text("Done"),
                 style: ElevatedButton.styleFrom(
