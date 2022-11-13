@@ -223,7 +223,7 @@ class _HomeUiState extends State<HomeUi> {
                   // ignore: prefer_const_constructors
                   trailing: Icon(Icons.update),
                   // ignore: prefer_const_constructors
-                  title: Text("Tel."),
+                  title: Text("Telephone Number"),
                   // ignore: prefer_const_constructors
                   subtitle: Text(ur_phone),
                 ),
