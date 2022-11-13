@@ -135,7 +135,7 @@ class _HomeUiState extends State<HomeUi> {
                               title: Text(
                                 "คุณจะใช้รูปภาพแบบ",
                                 style: GoogleFonts.kanit(
-                                    fontWeight: FontWeight.bold),
+                                    fontSize: 15, fontWeight: FontWeight.bold),
                               ),
                               actions: [
                                 CupertinoActionSheetAction(
