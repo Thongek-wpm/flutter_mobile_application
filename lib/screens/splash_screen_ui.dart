@@ -37,7 +37,7 @@ class _SplashUiState extends State<SplashUi> {
             'assets/images/Gear.gif',
             width: MediaQuery.of(context).size.width * 0.5,
           ),
-          SizedBox(
+          const SizedBox(
             height: 20.0,
           ),
           Text(
@@ -45,7 +45,7 @@ class _SplashUiState extends State<SplashUi> {
             style:
                 GoogleFonts.kanit(fontSize: 15.0, fontWeight: FontWeight.bold),
           ),
-          SizedBox(
+           const SizedBox( 
             height: 10.0,
           ),
           Text(

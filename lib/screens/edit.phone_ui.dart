@@ -99,7 +99,7 @@ class _EditphoneUiState extends State<EditphoneUi> {
                               onPressed: () {
                                 Navigator.pop(context);
                               },
-                              child: Text("Okay"),
+                              child: const Text("Okay"),
                             ),
                           ],
                         );
@@ -111,7 +111,7 @@ class _EditphoneUiState extends State<EditphoneUi> {
                     );
                   }
                 },
-                child: Text("Done"),
+                child: const Text("Done"),
                 style: ElevatedButton.styleFrom(
                     fixedSize: Size(
                   MediaQuery.of(context).size.width * 0.8,

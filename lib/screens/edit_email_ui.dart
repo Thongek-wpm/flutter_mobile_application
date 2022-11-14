@@ -99,7 +99,7 @@ class _EditemailUiState extends State<EditemailUi> {
                               onPressed: () {
                                 Navigator.pop(context);
                               },
-                              child: Text("Okay"),
+                              child: const Text("Okay"),
                             ),
                           ],
                         );
