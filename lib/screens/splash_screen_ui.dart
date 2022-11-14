@@ -34,7 +34,7 @@ class _SplashUiState extends State<SplashUi> {
       body: Center(
         child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
           Image.asset(
-            'assets/images/sau_ssu_logo.png',
+            'assets/images/Gear.gif',
             width: MediaQuery.of(context).size.width * 0.5,
           ),
           SizedBox(
