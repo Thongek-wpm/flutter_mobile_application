@@ -12,16 +12,15 @@ class SplashUi extends StatefulWidget {
 class _SplashUiState extends State<SplashUi> {
   @override
   void initState() {
-    // TODO: implement initState
     //Splash Screen Code
     Future.delayed(
-      Duration(
+      const Duration(
         seconds: 3,
       ),
       () => Navigator.pushReplacement(
         context,
         MaterialPageRoute(
-          builder: ((context) => HomeUi()),
+          builder: ((context) => const HomeUi()),
         ),
       ),
     );
@@ -45,7 +44,7 @@ class _SplashUiState extends State<SplashUi> {
             style:
                 GoogleFonts.kanit(fontSize: 15.0, fontWeight: FontWeight.bold),
           ),
-           const SizedBox( 
+          const SizedBox(
             height: 10.0,
           ),
           Text(
