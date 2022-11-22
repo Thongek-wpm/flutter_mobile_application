@@ -1,4 +1,4 @@
-# my_mo_app
+# flutter_mobile_application
 <img src=https://user-images.githubusercontent.com/70640558/201535766-aff7b855-8dc4-4a17-a9c4-30c8282372c9.jpg></img>
 
 ## Getting Started
