@@ -50,7 +50,6 @@ class _HomeUiState extends State<HomeUi> {
 
   @override
   void initState() {
-    // TODO: implement initState
     getfromSP();
     super.initState();
   }
