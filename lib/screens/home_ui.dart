@@ -1,3 +1,5 @@
+// ignore_for_file: non_constant_identifier_names
+
 import 'dart:io';
 
 import 'package:flutter/cupertino.dart';
@@ -19,6 +21,7 @@ class HomeUi extends StatefulWidget {
 }
 
 class _HomeUiState extends State<HomeUi> {
+ 
   String ur_name = 'โปรดใส่ข้อมูล';
   String ur_phone = 'โปรดใส่ข้อมูล';
   String ur_email = 'โปรดใส่ข้อมูล';
